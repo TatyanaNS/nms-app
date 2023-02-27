@@ -22,6 +22,6 @@ ENV TZ=Europe/Kiev \
     USER_NAME=$USER_NAME \
     DB_PASSWORD=$DB_PASSWORD
 
-COPY /target/JavaDev-Notes-0.0.1-SNAPSHOT.jar JavaDev-Notes.jar
+COPY --from=build /target/JavaDev-Notes-0.0.1-SNAPSHOT.jar JavaDev-Notes-0.0.1-SNAPSHOT.jar
 
-ENTRYPOINT ["java", "-jar", "JavaDev-Notes.jar"]
+ENTRYPOINT ["java", "-jar", "JavaDev-Notes-0.0.1-SNAPSHOT.jar"]

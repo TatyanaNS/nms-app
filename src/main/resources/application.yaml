@@ -3,6 +3,9 @@ spring:
     active: prod
 
 server:
+  tomcat:
+    accesslog:
+      enabled: true
   port: 9999
 ---
 spring:

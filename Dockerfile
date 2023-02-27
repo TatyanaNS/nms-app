@@ -18,10 +18,10 @@ FROM openjdk:11
 MAINTAINER Novikova Tatyana
 
 ENV TZ=Europe/Kiev \
-    DB_USER_NAME=$DB_USER_NAME \
-    DB_PASSWORD=$DB_PASSWORD \
-    URL=$URL
+    URL=$URL \
+    USER_NAME=$USER_NAME \
+    DB_PASSWORD=$DB_PASSWORD
 
-COPY target/JavaDev-Notes*.jar JavaDev-Notes.jar
+COPY /target/JavaDev-Notes-0.0.1-SNAPSHOT.jar JavaDev-Notes.jar
 
 ENTRYPOINT ["java", "-jar", "JavaDev-Notes.jar"]

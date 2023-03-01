@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:2.7.7-jdk-11 AS build
+FROM antlr:2.7.7-jdk-11 AS build
 COPY . .
 RUN mvn clean package -Pprod -DskipTests
 

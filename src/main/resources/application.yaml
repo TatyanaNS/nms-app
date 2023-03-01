@@ -1,6 +1,9 @@
 spring:
   profiles:
     active: prod
+  main:
+    allow-circular-references: true
+#    web-application-type: none
 
 server:
   tomcat:
@@ -39,6 +42,14 @@ spring:
     username: uxcbzsmy
     password: UGf8nyog_kPYrgY5Y9gXw40HZOZi0-7P
     driver-class-name: org.postgresql.Driver
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 10
+      idleTimeout: 120000
+      connectionTimeout: 300000
+      leakDetectionThreshold: 300000
+      data-source-properties:
+        autoReconnect: true
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true

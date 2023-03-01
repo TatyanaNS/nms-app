@@ -54,9 +54,9 @@ spring:
     activate:
       on-profile: mysql
   datasource:
-    url: ${URL}
-    username: ${USER_NAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://suleiman.db.elephantsql.com:5432/uxcbzsmy
+    username: uxcbzsmy
+    password: UGf8nyog_kPYrgY5Y9gXw40HZOZi0-7P
   jpa:
     show-sql: true
     open-in-view: false

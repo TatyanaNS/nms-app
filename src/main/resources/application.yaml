@@ -1,3 +1,8 @@
+app:
+  encoding: "@project.build.sourceEncoding@"
+  java:
+    version: "@java.version@"
+
 spring:
   profiles:
     active: prod

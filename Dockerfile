@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:11-jdk-slim
 MAINTAINER Novikova Tatyana
 ENV TZ=Europe/Kiev \
     URL=$URL \

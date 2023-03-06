@@ -14,6 +14,6 @@ ENV URL=$URL \
     USER_NAME=$USER_NAME \
     DB_PASSWORD=$DB_PASSWORD
 #ENV PORT=9999
-#EXPOSE 9999
+EXPOSE 9999 9999
 COPY --from=build /target/JavaDev-Notes-0.0.1-SNAPSHOT.jar JavaDev-Notes.jar
 ENTRYPOINT ["java","-jar","JavaDev-Notes.jar"]

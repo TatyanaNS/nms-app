@@ -40,9 +40,9 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:postgresql://suleiman.db.elephantsql.com:5432/uxcbzsmy
-    username: uxcbzsmy
-    password: UGf8nyog_kPYrgY5Y9gXw40HZOZi0-7P
+    url: ${URL}
+    username: ${USER_NAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:

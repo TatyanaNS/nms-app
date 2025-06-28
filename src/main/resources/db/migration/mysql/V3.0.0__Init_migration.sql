@@ -10,12 +10,14 @@ CREATE TABLE users (
   PRIMARY KEY (id));
 
 CREATE TABLE user_role (
-  user_id varchar(36) NOT NULL,
-  role_id varchar(36) NOT NULL,
-  KEY FKt7e7djp752sqn6w22i6ocqy6q (role_id),
-  KEY FKj345gk1bovqvfame88rcx7yyx (user_id),
-  FOREIGN KEY (user_id) REFERENCES users (id),
-  FOREIGN KEY (role_id) REFERENCES roles (id));
+   user_id VARCHAR(36) NOT NULL,
+   role_id VARCHAR(36) NOT NULL,
+   PRIMARY KEY (user_id, role_id),
+   KEY FKt7e7djp752sqn6w22i6ocqy6q (role_id),
+   KEY FKj345gk1bovqvfame88rcx7yyx (user_id),
+   FOREIGN KEY (user_id) REFERENCES users (id),
+   FOREIGN KEY (role_id) REFERENCES roles (id)
+);
 
 CREATE TABLE notes (
   id varchar(36) NOT NULL,
